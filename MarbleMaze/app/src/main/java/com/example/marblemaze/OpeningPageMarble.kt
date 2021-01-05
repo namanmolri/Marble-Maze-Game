@@ -25,6 +25,8 @@ class OpeningPageMarble : AppCompatActivity(){
         logo.startAnimation(AnimationUtils.loadAnimation(this, R.anim.anim_in))
         Handler().postDelayed({
             logo.startAnimation(AnimationUtils.loadAnimation(this,R.anim.anim_out))
+            topLine.startAnimation(AnimationUtils.loadAnimation(this,R.anim.anim_out))
+            bottomLine.startAnimation(AnimationUtils.loadAnimation(this,R.anim.anim_out))
             Handler().postDelayed({
                 logo.visibility = View.GONE
                 startActivity(Intent(this, MainActivity::class.java))
