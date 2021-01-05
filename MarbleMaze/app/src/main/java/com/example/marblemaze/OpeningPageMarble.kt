@@ -4,14 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.view.animation.AnimationUtils
-import android.widget.*
+import android.view.animation.TranslateAnimation
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.marblemaze.MainActivity
-import com.example.marblemaze.R
+
 
 @Suppress("DEPRECATION")
 class OpeningPageMarble : AppCompatActivity(){
@@ -32,8 +31,38 @@ class OpeningPageMarble : AppCompatActivity(){
                 logo.visibility = View.GONE
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
-            },1500)
-        },1500)
+            },500)
+            val topAnimation = TranslateAnimation(
+                0.0f,
+                2000.0f,
+                0.0f,
+                0.0f
+            )
+
+
+            topAnimation.duration = 1000
+
+            topAnimation.repeatCount = 1
+
+            topAnimation.fillAfter = false
+            topLine.startAnimation(topAnimation)
+            val bottomAnimation = TranslateAnimation(
+                0.0f,
+                -2000.0f,
+                0.0f,
+                0.0f
+            )
+
+
+            bottomAnimation.duration = 1500
+
+            bottomAnimation.repeatCount = 1
+
+            bottomAnimation.fillAfter = false
+            topLine.startAnimation(topAnimation)
+            bottomLine.startAnimation(bottomAnimation)
+
+        },1000)
 
     }
 

@@ -4,22 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#448AFF">
+    android:background="@drawable/background_image">
 
     <ImageView
         android:id="@+id/logoOpening"
-        android:layout_width="88dp"
-        android:layout_height="96dp"
+        android:layout_width="132dp"
+        android:layout_height="117dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ellipsize="start"
+        android:rotationX="26"
         android:text="THE MARBLE"
         android:textColor="#EEFF41"
         android:textSize="24sp"
@@ -27,18 +29,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409" />
+        app:layout_constraintVertical_bias="0.353" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:rotationX="-26"
         android:text="GAME"
-        android:textColor="#FF5252"
+        android:textColor="#FFFF00"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
+        app:layout_constraintVertical_bias="0.658" />
 </androidx.constraintlayout.widget.ConstraintLayout>
