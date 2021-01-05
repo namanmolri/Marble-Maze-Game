@@ -5,6 +5,9 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+
+import android.widget.Toast
+ main
 import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
@@ -17,11 +20,21 @@ class MainActivity : AppCompatActivity() {
         val optionsButton = findViewById<Button>(R.id.options)
         val quitButton = findViewById<Button>(R.id.quit)
 
+
         optionsButton.setOnClickListener(){
             startActivity(Intent(this@MainActivity, OptionsPage::class.java ))
         }
 
         quitButton.setOnClickListener(){
+
+        startButton.setOnClickListener() {
+            val intent = Intent(this, StartActivity::class.java)
+            startActivity(intent)
+
+            Toast.makeText(this@MainActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
+        }
+        quitButton.setOnClickListener() {
+
             finishAndRemoveTask()
         }
     }
