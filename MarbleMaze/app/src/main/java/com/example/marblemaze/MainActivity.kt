@@ -1,5 +1,6 @@
 package com.example.marblemaze
 
+import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         val startButton = findViewById<Button>(R.id.start)
         val optionsButton = findViewById<Button>(R.id.options)
         val quitButton = findViewById<Button>(R.id.quit)
+
+        optionsButton.setOnClickListener(){
+            startActivity(Intent(this@MainActivity, OptionsPage::class.java ))
+        }
 
         quitButton.setOnClickListener(){
             finishAndRemoveTask()
