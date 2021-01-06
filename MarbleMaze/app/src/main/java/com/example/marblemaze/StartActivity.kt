@@ -12,7 +12,7 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.start_activity)
 
         findViewById<RecyclerView>(R.id.recycle_levels).layoutManager = LinearLayoutManager(this)
-        
+
 
     }
 }
