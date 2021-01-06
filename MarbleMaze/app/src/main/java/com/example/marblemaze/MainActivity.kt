@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         val optionsButton = findViewById<Button>(R.id.options)
         val quitButton = findViewById<Button>(R.id.quit)
 
+        startButton.setOnClickListener(){
+            startActivity(Intent(this@MainActivity, StartActivity::class.java))
+        }
 
         optionsButton.setOnClickListener() {
             startActivity(Intent(this@MainActivity, OptionsPage::class.java))
