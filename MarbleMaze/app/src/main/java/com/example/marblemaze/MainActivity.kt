@@ -19,21 +19,37 @@ class MainActivity : AppCompatActivity() {
         val optionsButton = findViewById<Button>(R.id.options)
         val quitButton = findViewById<Button>(R.id.quit)
 
+        startButton.setOnClickListener(){
+            startActivity(Intent(this@MainActivity, StartActivity::class.java))
+        }
 
         optionsButton.setOnClickListener() {
             startActivity(Intent(this@MainActivity, OptionsPage::class.java))
         }
 
 
+        quitButton.setOnClickListener() {
+
+
             startButton.setOnClickListener() {
                 val intent = Intent(this, StartActivity::class.java)
                 startActivity(intent)
+
 
             }
             quitButton.setOnClickListener() {
 
                 finishAndRemoveTask()
             }
+
+
+                Toast.makeText(this@MainActivity, "You clicked me.", Toast.LENGTH_SHORT).show()
+            }
+            quitButton.setOnClickListener() {
+
+                finishAndRemoveTask()
+            }
+        }
 
     }
 }
